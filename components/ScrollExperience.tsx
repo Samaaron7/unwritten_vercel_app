@@ -12,11 +12,13 @@ export default function ScrollExperience() {
   useEffect(() => {
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     let disposeMotion = () => {};
-    let motionSetting = "system";
+    let motionSetting = "full";
     try {
-      motionSetting = localStorage.getItem("unwritten-motion") || "system";
+      const saved = localStorage.getItem("unwritten-motion");
+      if (saved && ["full", "reduced", "system"].includes(saved))
+        motionSetting = saved;
     } catch {
-      /* Fall back to the device setting. */
+      /* Keep full motion enabled when storage is unavailable. */
     }
 
     function setup() {

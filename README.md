@@ -41,7 +41,7 @@ Production build and TypeScript checks pass. Browser checks covered desktop/mobi
 
 The site now uses Lenis for gentle wheel momentum, animated same-page chapter links, subtle photo parallax, reveal transitions, and a page progress indicator. The homepage includes a photo story that supports mouse dragging with release momentum, touch swiping, arrow buttons, keyboard arrows, and horizontal snap points.
 
-The footer’s **Motion** control offers **Use device setting**, **Full motion**, and **Reduced motion**. The default respects the visitor’s reduced-motion preference; Full motion is an explicit opt-in. Touch scrolling remains native. Opening a gallery photo pauses page momentum and restores it when the viewer closes.
+The footer’s **Motion** control offers **Use device setting**, **Full motion**, and **Reduced motion**. Full motion is enabled by default for new visitors. Visitors can choose Reduced motion or Use device setting; an explicit saved preference is preserved. Touch scrolling remains native. Opening a gallery photo pauses page momentum and restores it when the viewer closes.
 
 All 19 original services remain visible. Dhol & Dholak Players and Henna / Mehndi Artists lead the music, culture, and beauty section, reachable from the services page’s chapter links. Those two services and transportation use designed typographic cards until matching original photographs are supplied.
 

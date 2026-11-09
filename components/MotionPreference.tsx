@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react";
 
 export default function MotionPreference() {
-  const [value, setValue] = useState("system");
+  const [value, setValue] = useState("full");
   useEffect(() => {
     try {
       const saved = localStorage.getItem("unwritten-motion");
-      if (saved === "full" || saved === "reduced") setValue(saved);
+      if (saved === "full" || saved === "reduced" || saved === "system")
+        setValue(saved);
     } catch {
-      /* System preference remains available without storage. */
+      /* Full motion remains the default without storage. */
     }
   }, []);
   return (

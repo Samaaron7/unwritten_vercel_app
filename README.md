@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Unwritten Events
 
-## Getting Started
+Next.js 16 / React 19 website for Unwritten Events. The original Desktop project has been updated in place.
 
-First, run the development server:
+## Run locally
 
-```bash
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the Local URL printed by Next.js. For a production preview:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content and images
 
-## Learn More
+- `public/images/`: 53 optimized WebP copies of the supplied event photographs. The full-resolution originals remain untouched in the original image folder.
+- `lib/image-manifest.json`: photograph paths and descriptions.
+- `lib/photos.ts`: featured photo selections and gallery categories.
+- `lib/journal.ts`: four editable journal articles and their images.
+- `app/services/page.tsx`: service descriptions; `app/testimonials/page.tsx`: approved testimonials.
+- `components/Header.tsx` and `components/Footer.tsx`: navigation and social/contact links.
 
-To learn more about Next.js, take a look at the following resources:
+## Contact and consultation requests
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Business email: **unwrittenev@gmail.com**. Phone: **516-673-7943**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Both forms validate the visitor’s details and prepare an email addressed to the business. Visitors must choose **Open email app** and send the email, or copy the prepared message into their email service. The website does not send automatically, store submissions, or claim that a booking has been confirmed.
 
-## Deploy on Vercel
+A live booking provider/calendar and automatic form delivery are not configured. Replace the consultation request flow with your actual booking link when your booking service is ready. Do not put email credentials or provider secrets in browser code.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Verification
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Production build and TypeScript checks pass. Browser checks covered desktop/mobile layouts, mobile navigation, gallery filtering and photo viewer controls, form validation, and email-draft generation. No test emails were sent.
+
+## Scrolling and motion
+
+The site now uses Lenis for gentle wheel momentum, animated same-page chapter links, subtle photo parallax, reveal transitions, and a page progress indicator. The homepage includes a photo story that supports mouse dragging with release momentum, touch swiping, arrow buttons, keyboard arrows, and horizontal snap points.
+
+The footer’s **Motion** control offers **Use device setting**, **Full motion**, and **Reduced motion**. The default respects the visitor’s reduced-motion preference; Full motion is an explicit opt-in. Touch scrolling remains native. Opening a gallery photo pauses page momentum and restores it when the viewer closes.
+
+All 19 original services remain visible. Dhol & Dholak Players and Henna / Mehndi Artists lead the music, culture, and beauty section, reachable from the services page’s chapter links. Those two services and transportation use designed typographic cards until matching original photographs are supplied.
+
+
+
+The current website uses decor-only photographs. Images containing guests or printed portraits have been removed from the public assets and the gallery. Full-resolution originals remain untouched in their original Desktop folder.
